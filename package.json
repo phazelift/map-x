@@ -1,6 +1,6 @@
 {
   "name": "map-x",
-  "version": "0.0.1"
+  "version": "0.0.1",
   "description": "Auto detecting map for Object and Array",
   "main": "map-x.min.js",
   "scripts": {
