@@ -1,0 +1,24 @@
+{
+  "name": "map-x",
+  "version": "0.0.1"
+  "description": "Auto detecting map for Object and Array",
+  "main": "map-x.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phazelift/map-x"
+  },
+  "keywords": [
+    "map",
+    "array",
+    "object"
+  ],
+  "author": "Dennis Raymondo van der Sluis <phazelift@gmail.com> (https://github.com/phazelift/)",
+  "license": "GPL-3",
+  "bugs": {
+    "url": "https://github.com/phazelift/map-x/issues"
+  },
+  "homepage": "https://github.com/phazelift/map-x"
+}
