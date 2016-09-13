@@ -29,3 +29,7 @@ var obj= map( {a: 1, b: 2, c: 3}, square );
 console.log( obj );
 // { a: 1, b: 4, c: 9 }
 ```
+
+###license
+
+MIT
