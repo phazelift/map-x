@@ -26,22 +26,25 @@
 // SOFTWARE.
 //
 
-var mapX= function( obj, callback ){
+function isFunction(f){
+	return typeof f === 'function';
+}
 
-	var mapped= {};
+
+module.exports= function( obj, callback ){
+	var mapped	= [];
+	callback		= isFunction(callback) ? callback : (n) => n;
 
 	if ( obj instanceof Array ){
-		mapped= [];
 
-		if ( 'function' === typeof Array.prototype.map ){
-			mapped= obj.map( callback );
-		} else {
-			 for ( var index in obj ){
-				mapped.push( callback(obj[ index ]) );
-			}
+		if ( isFunction(Array.prototype.map) ){
+			mapped = obj.map( callback );
+		} else for ( var index in obj ){
+			mapped.push( callback(obj[ index ]) );
 		}
 
-	} else {
+	} else if ( typeof obj === 'object' ){
+		mapped = {};
 
 		for ( var key in obj ){
 			if ( obj.hasOwnProperty(key) ){
@@ -53,5 +56,3 @@ var mapX= function( obj, callback ){
 
  	return mapped;
 };
-
-module.exports= mapX;

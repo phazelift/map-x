@@ -6,7 +6,8 @@ Auto detecting, non-destructive map for Object and Array
 - Auto detects Object or Array and applies the appropriate operation
 - Switches to native map, if available, in case of Array 
 - Checks for hasOwnProperty in case of Object
-- Does not change the original Object or Array
+- Won't crash on missing arguments
+- Returns original input on missing handler
 
 --
 
@@ -15,17 +16,19 @@ Auto detecting, non-destructive map for Object and Array
 
 >Install with npm: `npm install --save map-x`
 
+<br/>
+
 
 ```javascript
-var map= require( 'map-x' );
+import mapx from 'map-x';
 
-var square= (value) => (value * value);
+const square= value => value * value;
 
-var arr= map( [1, 2, 3], square );
+const arr= mapx( [1, 2, 3], square );
 console.log( arr );
 // [ 1, 4, 9 ]
 
-var obj= map( {a: 1, b: 2, c: 3}, square );
+const obj= mapx( {a: 1, b: 2, c: 3}, square );
 console.log( obj );
 // { a: 1, b: 4, c: 9 }
 ```
