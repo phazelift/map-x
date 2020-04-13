@@ -1,4 +1,4 @@
-const mapx = require( './map-x.js' );
+const mapx = require( './map-x.min.js' );
 
 
 const square= (n) => n * n;

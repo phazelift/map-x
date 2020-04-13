@@ -33,7 +33,7 @@ function isFunction(f){
 
 module.exports= function( obj, callback ){
 	var mapped	= [];
-	callback		= isFunction(callback) ? callback : (n) => n;
+	callback		= isFunction(callback) ? callback : function(n){ return n };
 
 	if ( obj instanceof Array ){
 
